@@ -36,6 +36,7 @@ h6 {
   position: absolute;
   top: 2rem;
   left: 2rem;
+  display: block;
 }
 
 .welcome h3 {
@@ -46,7 +47,7 @@ h6 {
 }
 
 .welcome h1 {
-  font-size: 12vh;
+  font-size: 5rem;
   letter-spacing: 4px;
   font-weight: 400;
 }
@@ -88,9 +89,10 @@ button {
 
 /* About */
 
-.about h1 {
+ h2 {
   font-size: 4rem;
   padding: 4rem;
+  margin-top: 1.5rem;
 }
 
 .about p {
@@ -135,7 +137,8 @@ button {
   margin-right: 3rem;
 }
 
-#b3:hover {
+#b3:hover,
+#b4:hover {
   transform: translateY(-10px);
   transition: all ease-out 0.5s 0.1s;
 }
@@ -326,21 +329,22 @@ button {
 
 /* Style inputs with type="text", select elements and textareas */
 
-
-
-input[type=text],input[type=email], select, textarea {
-  width: 50%; 
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 50%;
   display: block;
   margin: 6px auto 16px;
-  padding: 12px; /* Some padding */ 
+  padding: 12px; /* Some padding */
   border: 1px solid #ccc; /* Gray border */
   border-radius: 4px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
 /* Style the submit button with a specific background color etc */
-input[type=submit] {
+input[type="submit"] {
   background-color: #000;
   color: white;
   padding: 12px 20px;
@@ -351,18 +355,18 @@ input[type=submit] {
   margin: 3rem auto;
 }
 
-label{
+label {
   text-align: left;
-  width:50%;
+  width: 50%;
   margin: 2px auto 20px;
   font-size: 1.5rem;
   display: block;
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
+input[type="submit"]:hover {
   background-color: #eee;
-  color:#000;
+  color: #000;
   border: solid #000;
 }
 
@@ -374,6 +378,33 @@ input[type=submit]:hover {
 
 /* MEDIA QUIERIES */
 @media (max-width: 900px) {
+   h1 {
+    font-size: 2rem;
+  }
+
+  h2{
+
+  }
+
+  .about p {
+    font-size: 0.9rem;
+    width:80%;
+    
+  }
+
+  .about .pfp {
+    width: 10rem;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  button:hover {
+    transform: translateY(-10px);
+    transition: all ease-out 0.5s 0.1s;
+  }
+
   .projects {
     padding: 1rem;
     display: block;
@@ -386,5 +417,14 @@ input[type=submit]:hover {
   .grid {
     display: grid;
     grid-template-columns: 100%;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="submit"],
+  select,
+  textarea,
+  label{
+    width:90%;
   }
 }
